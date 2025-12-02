@@ -13,6 +13,7 @@ export default defineConfig(({ mode }) => {
     
     return {
       base: mode === 'production' ? base : '/',
+      publicDir: 'public',
       server: {
         port: 3000,
         host: '0.0.0.0',
