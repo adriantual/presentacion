@@ -4,15 +4,15 @@ import react from '@vitejs/plugin-react';
 
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
-    // Para GitHub Pages: si el repo es "usuario/repo", la base será "/repo/"
-    // Si el repo es "usuario/usuario.github.io", la base será "/"
-    const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1];
+    // Para GitHub Pages: el repositorio es "adriantual/presentacion"
+    // Así que el base path debe ser "/presentacion/"
+    const repoName = process.env.GITHUB_REPOSITORY?.split('/')[1] || 'presentacion';
     const base = repoName && !repoName.includes('.github.io') 
       ? `/${repoName}/` 
       : '/';
     
     return {
-      base: mode === 'production' && process.env.GITHUB_REPOSITORY ? base : '/',
+      base: mode === 'production' ? base : '/',
       server: {
         port: 3000,
         host: '0.0.0.0',
