@@ -1732,22 +1732,138 @@ export const ProblemsSlide: React.FC<SlideProps> = () => {
 };
 
 // --- Slide 10: Conclusion ---
-export const ConclusionSlide: React.FC<SlideProps> = () => (
-  <div className="w-full max-w-4xl text-center animate-slide-up">
-    <h2 className="text-6xl font-bold mb-12">Conclusión</h2>
-    <p className="text-3xl font-light leading-relaxed text-slate-200 mb-16">
-      "El éxito del Vibe Coding no está en dejar que la 'vibra' guíe el código, sino en hacer que <span className="text-unrn-red font-bold">la razón, el conocimiento y la ética</span> guíen la vibra."
-    </p>
-    
-    <div className="flex justify-center gap-4">
-        <button className="px-8 py-3 bg-unrn-red hover:bg-red-700 text-white rounded-full font-bold transition-colors">
-          Muchas Gracias
-        </button>
+export const ConclusionSlide: React.FC<SlideProps> = () => {
+  const [activeTab, setActiveTab] = React.useState<'final' | 'mas-alla'>('final');
+
+  return (
+    <div className="w-full h-full flex flex-col items-center justify-center px-8 animate-fade-in">
+      <div className="w-full max-w-6xl">
+        <h2 className="text-5xl md:text-6xl font-black mb-8 text-center text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-400">
+          Conclusiones
+        </h2>
+
+        {/* Tabs */}
+        <div className="flex gap-4 mb-8 justify-center">
+          <button
+            onClick={() => setActiveTab('final')}
+            className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 ${
+              activeTab === 'final'
+                ? 'bg-unrn-red text-white shadow-lg shadow-red-500/50'
+                : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
+            }`}
+          >
+            El Final
+          </button>
+          <button
+            onClick={() => setActiveTab('mas-alla')}
+            className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 ${
+              activeTab === 'mas-alla'
+                ? 'bg-unrn-red text-white shadow-lg shadow-red-500/50'
+                : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
+            }`}
+          >
+            Más Allá del Código
+          </button>
+        </div>
+
+        {/* Content */}
+        <div className="bg-slate-900/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-700 shadow-2xl min-h-[400px]">
+          {activeTab === 'final' && (
+            <div className="space-y-6 animate-fade-in">
+              <div className="flex items-start gap-4">
+                <CheckCircle className="w-8 h-8 text-green-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 text-white">El verdadero valor del Vibe Coding</h3>
+                  <p className="text-lg text-slate-300 leading-relaxed">
+                    No radica en "dejar que la IA programe sola", sino en <span className="text-unrn-red font-semibold">aprender a conducirla con criterio técnico y pensamiento crítico</span>. La IA puede automatizar, pero no puede decidir; puede generar código, pero no comprender el propósito.
+                  </p>
+                </div>
+              </div>
+
+              <div className="h-px bg-slate-700 my-6"></div>
+
+              <div className="flex items-start gap-4">
+                <Brain className="w-8 h-8 text-blue-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 text-white">El rol humano es esencial</h3>
+                  <p className="text-lg text-slate-300 leading-relaxed">
+                    La IA no convierte a nadie en experto. Utilizar herramientas inteligentes no implica entender la lógica o la arquitectura. <span className="text-unrn-red font-semibold">Las herramientas son poderosas, pero dependen del saber humano que las orienta y valida</span>.
+                  </p>
+                </div>
+              </div>
+
+              <div className="h-px bg-slate-700 my-6"></div>
+
+              <div className="flex items-start gap-4">
+                <Globe className="w-8 h-8 text-purple-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 text-white">Ética y responsabilidad</h3>
+                  <p className="text-lg text-slate-300 leading-relaxed">
+                    El verdadero desafío no es hacer sistemas más rápidos, sino crear herramientas <span className="text-unrn-red font-semibold">más responsables, inclusivas y conscientes de su impacto</span>. La ética, la transparencia y la responsabilidad deben ocupar un lugar central.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-8 p-6 bg-gradient-to-r from-unrn-red/20 to-purple-500/20 rounded-xl border border-unrn-red/30">
+                <p className="text-xl text-center text-slate-200 italic font-semibold">
+                  "El futuro del desarrollo no se define por cuánta IA utilizamos, sino por <span className="text-unrn-red">cómo la integramos responsablemente</span> en nuestras prácticas."
+                </p>
+              </div>
+            </div>
+          )}
+
+          {activeTab === 'mas-alla' && (
+            <div className="space-y-6 animate-fade-in">
+              <div className="flex items-start gap-4">
+                <Server className="w-8 h-8 text-orange-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 text-white">Impacto ambiental</h3>
+                  <p className="text-lg text-slate-300 leading-relaxed">
+                    Entrenar y mantener los grandes modelos de IA requiere <span className="text-unrn-red font-semibold">infraestructuras con altísimo consumo energético</span>. Una sola consulta puede consumir hasta diez veces más energía que una búsqueda web tradicional.
+                  </p>
+                </div>
+              </div>
+
+              <div className="h-px bg-slate-700 my-6"></div>
+
+              <div className="flex items-start gap-4">
+                <Brain className="w-8 h-8 text-cyan-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 text-white">Preservar nuestras capacidades</h3>
+                  <p className="text-lg text-slate-300 leading-relaxed">
+                    La automatización, si se usa sin criterio, puede llevarnos a <span className="text-unrn-red font-semibold">depender tanto de la máquina que olvidemos ejercitar nuestras habilidades intelectuales</span>. El cerebro necesita mantenerse activo: analizar, razonar, equivocarse y volver a intentar.
+                  </p>
+                </div>
+              </div>
+
+              <div className="h-px bg-slate-700 my-6"></div>
+
+              <div className="flex items-start gap-4">
+                <Target className="w-8 h-8 text-green-400 flex-shrink-0 mt-1" />
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 text-white">El desafío doble</h3>
+                  <p className="text-lg text-slate-300 leading-relaxed">
+                    Construir tecnología <span className="text-unrn-red font-semibold">sostenible y preservar nuestra capacidad de pensar</span>. La IA puede ayudarnos a programar más rápido, pero el verdadero valor está en el juicio humano que decide cómo y para qué usarla.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mt-8 p-6 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-xl border border-green-500/30">
+                <p className="text-xl text-center text-slate-200 italic font-semibold">
+                  "Mirar más allá del código implica reconocer que detrás de cada línea hay <span className="text-unrn-red">decisiones que afectan no solo al software, sino al mundo real</span>."
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Footer */}
+        <div className="mt-12 text-center">
+          <p className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-unrn-red to-purple-500">
+            Muchas Gracias
+          </p>
+        </div>
+      </div>
     </div>
-    
-    <div className="mt-20 opacity-50">
-      <img src="https://picsum.photos/seed/qr/100/100" alt="QR Contacto" className="w-24 h-24 mx-auto rounded-lg grayscale" />
-      <p className="text-xs mt-2">Repositorio & Contacto</p>
-    </div>
-  </div>
-);
+  );
+};
