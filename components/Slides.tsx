@@ -1734,6 +1734,11 @@ export const ProblemsSlide: React.FC<SlideProps> = () => {
 // --- Slide 10: Conclusion ---
 export const ConclusionSlide: React.FC<SlideProps> = () => {
   const [activeTab, setActiveTab] = React.useState<'final' | 'mas-alla'>('final');
+  
+  // Reset to first tab when slide becomes active
+  React.useEffect(() => {
+    setActiveTab('final');
+  }, []);
 
   return (
     <div className="w-full h-full flex flex-col items-center justify-center px-8 animate-fade-in">
