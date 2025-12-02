@@ -59,7 +59,7 @@ export const TitleSlide: React.FC<SlideProps> = () => (
         <div className="absolute inset-0 bg-gradient-to-tr from-unrn-red/20 to-blue-500/20 mix-blend-overlay z-10"></div>
         {/* Placeholder for the image of the boy and robot */}
         <img 
-          src="/imagenes/Gemini_Generated_Image_izliryizliryizli.png" 
+          src={`${import.meta.env.BASE_URL}imagenes/Gemini_Generated_Image_izliryizliryizli.png`} 
           alt="Vibe Coding Illustration" 
           className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
           onError={(e) => {
@@ -230,7 +230,7 @@ export const ToolSlide: React.FC<SlideProps> = () => (
       <div className="relative z-10 mb-12">
         <div className="w-64 h-64 md:w-80 md:h-80 rounded-3xl overflow-hidden shadow-[0_0_60px_rgba(59,130,246,0.3)] border border-slate-700/50 bg-black">
           <img 
-            src="/imagenes/cursorImg.gif" 
+            src={`${import.meta.env.BASE_URL}imagenes/cursorImg.gif`} 
             alt="Cursor Logo Animation"
             className="w-full h-full object-cover"
             onError={(e) => {
@@ -240,7 +240,7 @@ export const ToolSlide: React.FC<SlideProps> = () => (
                     container.innerHTML = `
                     <div class="w-full h-full flex items-center justify-center flex-col bg-black text-white p-4 text-center">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="w-20 h-20 mb-4 text-white"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
-                        <span class="text-xs font-mono text-slate-500">GIF not found<br/>/imagenes/cursorImg.gif</span>
+                        <span class="text-xs font-mono text-slate-500">GIF not found<br/>imagenes/cursorImg.gif</span>
                     </div>`;
                 }
             }}
@@ -305,7 +305,7 @@ export const CaseStudySlide: React.FC<SlideProps> = () => (
           </div>
           <div className="relative w-full h-full bg-black">
             <video 
-              src="/imagenes/classiclickpagina.mp4"
+              src={`${import.meta.env.BASE_URL}imagenes/classiclickpagina.mp4`}
               autoPlay
               loop
               muted
@@ -316,7 +316,7 @@ export const CaseStudySlide: React.FC<SlideProps> = () => (
                 if (container) {
                   container.innerHTML = `
                     <div class="w-full h-full flex items-center justify-center flex-col bg-slate-900 text-white p-4 text-center">
-                      <span class="text-xs font-mono text-slate-500">Video not found<br/>/imagenes/classiclickpagina.mp4</span>
+                      <span class="text-xs font-mono text-slate-500">Video not found<br/>imagenes/classiclickpagina.mp4</span>
                     </div>`;
                 }
               }}
@@ -332,12 +332,12 @@ export const CaseStudySlide: React.FC<SlideProps> = () => (
 const TechIcons: React.FC = () => (
   <div className="flex items-center justify-center gap-6">
     <div className="flex flex-col items-center gap-2">
-      <img src="/imagenes/springLogo.png" alt="Spring Boot" className="w-16 h-16 object-contain" />
+      <img src={`${import.meta.env.BASE_URL}imagenes/springLogo.png`} alt="Spring Boot" className="w-16 h-16 object-contain" />
       <span className="text-xs text-slate-400 font-mono">Spring</span>
     </div>
     <div className="text-slate-600 text-2xl">→</div>
     <div className="flex flex-col items-center gap-2">
-      <img src="/imagenes/angularLogo.png" alt="Angular" className="w-16 h-16 object-contain" />
+      <img src={`${import.meta.env.BASE_URL}imagenes/angularLogo.png`} alt="Angular" className="w-16 h-16 object-contain" />
       <span className="text-xs text-slate-400 font-mono">Angular</span>
     </div>
     <div className="text-slate-600 text-2xl">→</div>
@@ -1709,7 +1709,7 @@ export const ProblemsSlide: React.FC<SlideProps> = () => {
             <div className="rounded-lg overflow-hidden border-2 border-red-500/30 bg-slate-900 p-2 max-w-5xl">
               <div className="relative w-full max-h-[600px] overflow-auto bg-slate-950 rounded">
                 <img 
-                  src="/imagenes/problemaIA.jpg" 
+                  src={`${import.meta.env.BASE_URL}imagenes/problemaIA.jpg`} 
                   alt="Problema con IA eliminando tests" 
                   className="w-full h-auto max-w-full"
                   style={{
