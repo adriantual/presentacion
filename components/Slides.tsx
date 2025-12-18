@@ -33,9 +33,9 @@ export const TitleSlide: React.FC<SlideProps> = () => (
         <p className="text-slate-400 tracking-widest text-sm uppercase">Licenciatura en Sistemas</p>
       </div>
       
-      <h1 className="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-200 to-slate-400 leading-tight drop-shadow-lg">
+      <h1 className="text-5xl md:text-6xl font-extrabold  from-white via-slate-200 to-slate-400 leading-tight drop-shadow-lg">
         Prácticas Recomendadas para un Desarrollo Eficiente de<br/>
-        <span className="text-unrn-red italic">"Vibe Coding"</span>
+        <span className="from-white">"Vibe Coding"</span>
       </h1>
 
       <div className="flex flex-col gap-2 mt-8 text-slate-300">
@@ -107,17 +107,17 @@ export const IntroSlide: React.FC<SlideProps> = () => (
         <div className="absolute bottom-10 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
      </div>
 
-    <div className="z-10 flex flex-col items-center gap-6 max-w-4xl w-full px-4">
-      <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter text-transparent bg-clip-text bg-gradient-to-br from-white to-slate-400">
-        Vibe Coding
-      </h2>
+    <div className="z-10 flex flex-col items-center gap-4 max-w-7xl w-full px-4">
+    <h2 className="text-5xl md:text-7xl font-black text-white mb-2 drop-shadow-md">
+  Vibe Coding
+</h2>
       
       {/* Tweet Container */}
       <div className="relative group w-full">
         <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
-        <div className="relative bg-slate-900 rounded-xl overflow-hidden shadow-2xl border-2 border-slate-700 p-6">
+        <div className="relative bg-slate-900 rounded-xl overflow-hidden shadow-2xl border-2 border-slate-700 p-5">
           {/* Tweet Header */}
-          <div className="flex items-center gap-3 mb-4 pb-4 border-b border-slate-700">
+          <div className="flex items-center gap-3 mb-3 pb-3 border-b border-slate-700">
             <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
               AK
             </div>
@@ -131,7 +131,7 @@ export const IntroSlide: React.FC<SlideProps> = () => (
           </div>
 
           {/* Tweet Content */}
-          <div className="text-slate-200 text-base leading-relaxed space-y-3 mb-4">
+          <div className="text-slate-200 text-base leading-relaxed space-y-2 mb-3">
             <p>
               Hay un nuevo tipo de programación que llamo <strong className="text-blue-400">"vibe coding"</strong>, donde te entregás completamente a la vibra, abrazás lo exponencial y te olvidás de que el código siquiera existe. Esto es posible porque los LLMs (por ejemplo, Cursor Composer con Sonnet) ya son demasiado buenos.
             </p>
@@ -150,7 +150,7 @@ export const IntroSlide: React.FC<SlideProps> = () => (
           </div>
 
           {/* Tweet Footer */}
-          <div className="flex items-center gap-6 text-slate-500 text-sm pt-4 border-t border-slate-700">
+          <div className="flex items-center gap-6 text-slate-500 text-sm pt-3 border-t border-slate-700">
             <div className="flex items-center gap-2">
               <span>👁</span>
               <span>5.1M</span>
@@ -170,7 +170,7 @@ export const IntroSlide: React.FC<SlideProps> = () => (
           </div>
 
           {/* Link */}
-          <div className="mt-4 pt-4 border-t border-slate-700">
+          <div className="mt-3 pt-3 border-t border-slate-700">
             <a 
               href="https://x.com/karpathy/status/1886192184808149383" 
               target="_blank" 
@@ -205,17 +205,17 @@ export const ObjectivesSlide: React.FC<SlideProps> = () => (
 
       {/* Specific Objectives */}
       {[
-        { icon: <CheckCircle className="text-emerald-400" />, text: "Investigar herramientas de desarrollo asistidas por IA." },
-        { icon: <CheckCircle className="text-emerald-400" />, text: "Indagar nuevas terminologías y enfoques." },
-        { icon: <CheckCircle className="text-emerald-400" />, text: "Seleccionar herramientas para relevar (Cursor, GitHub Copilot)." },
-        { icon: <CheckCircle className="text-emerald-400" />, text: "Desarrollar una aplicación web real (Caso de Estudio)." },
-        { icon: <CheckCircle className="text-emerald-400" />, text: "Extraer y documentar la experiencia práctica." }
-      ].map((obj, i) => (
-        <div key={i} className="bg-card-bg p-6 rounded-xl border border-slate-800 flex flex-col gap-4 hover:bg-slate-800 transition-colors hover:border-emerald-500/30">
-          <div className="p-2 bg-slate-900 w-fit rounded-lg">{obj.icon}</div>
-          <p className="text-slate-300">{obj.text}</p>
-        </div>
-      ))}
+  { icon: <CheckCircle className="text-emerald-400 flex-shrink-0" size={24} />, text: "Investigar herramientas de desarrollo asistidas por IA." },
+  { icon: <CheckCircle className="text-emerald-400 flex-shrink-0" size={24} />, text: "Indagar nuevas terminologías y enfoques." },
+  { icon: <CheckCircle className="text-emerald-400 flex-shrink-0" size={24} />, text: "Seleccionar herramientas para relevar (Cursor, GitHub Copilot)." },
+  { icon: <CheckCircle className="text-emerald-400 flex-shrink-0" size={24} />, text: "Desarrollar una aplicación web real (Caso de Estudio)." },
+  { icon: <CheckCircle className="text-emerald-400 flex-shrink-0" size={24} />, text: "Extraer y documentar la experiencia práctica." }
+].map((obj, i) => (
+  <div key={i} className="bg-card-bg p-5 rounded-xl border border-slate-800 flex flex-row items-center gap-4 hover:bg-slate-800 transition-colors hover:border-emerald-500/30">
+    <div className="p-1 bg-slate-900 rounded-lg">{obj.icon}</div>
+    <p className="text-slate-300 text-sm md:text-base">{obj.text}</p>
+  </div>
+))}
     </div>
   </div>
 );
@@ -335,16 +335,12 @@ const TechIcons: React.FC = () => (
       <img src={`${import.meta.env.BASE_URL || '/'}imagenes/springLogo.png`} alt="Spring Boot" className="w-16 h-16 object-contain" />
       <span className="text-xs text-slate-400 font-mono">Spring</span>
     </div>
-    <div className="text-slate-600 text-2xl">→</div>
+   
     <div className="flex flex-col items-center gap-2">
       <img src={`${import.meta.env.BASE_URL || '/'}imagenes/angularLogo.png`} alt="Angular" className="w-16 h-16 object-contain" />
       <span className="text-xs text-slate-400 font-mono">Angular</span>
     </div>
-    <div className="text-slate-600 text-2xl">→</div>
-    <div className="flex flex-col items-center gap-2">
-      <Terminal size={32} className="text-green-400" />
-      <span className="text-xs text-slate-400 font-mono">Cursor</span>
-    </div>
+  
   </div>
 );
 
@@ -1234,38 +1230,6 @@ public ClasificadoResponseDTO guardarClasificado(ClasificadoCreacionRequestDTO d
 }`
   };
 
-  const buenasPracticas = [
-    {
-      titulo: "Mentalidad Analítica",
-      desc: "No todo cambio sugerido por la IA debe aplicarse inmediatamente. Verificar, comparar y ajustar.",
-      icon: "🔬"
-    },
-    {
-      titulo: "Registro Cronológico",
-      desc: "Mantener un registro de errores y soluciones probadas para identificar patrones.",
-      icon: "📊"
-    },
-    {
-      titulo: "Tests Automatizados",
-      desc: "Cada corrección debe estar acompañada por su respectiva prueba automatizada.",
-      icon: "🧪"
-    },
-    {
-      titulo: "Control de Versiones",
-      desc: "Usar Git para aislar cambios, revertirlos en caso de falla y mantener estabilidad.",
-      icon: "🌳"
-    },
-    {
-      titulo: "Validación Incremental",
-      desc: "Probar cambios uno por vez, validando que no afecten otras partes del sistema.",
-      icon: "🔄"
-    },
-    {
-      titulo: "Trazabilidad Completa",
-      desc: "Documentar problema, causa y solución para mantener historial del proceso.",
-      icon: "🔗"
-    }
-  ];
 
   return (
     <div className="w-full space-y-6">
@@ -1290,16 +1254,6 @@ public ClasificadoResponseDTO guardarClasificado(ClasificadoCreacionRequestDTO d
           }`}
         >
           Ejemplo Interactivo
-        </button>
-        <button
-          onClick={() => setActiveTab('practicas')}
-          className={`px-4 py-2 rounded-lg font-semibold text-sm transition-all ${
-            activeTab === 'practicas'
-              ? 'bg-unrn-red text-white'
-              : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
-          }`}
-        >
-          Buenas Prácticas
         </button>
       </div>
 
@@ -1385,20 +1339,7 @@ public ClasificadoResponseDTO guardarClasificado(ClasificadoCreacionRequestDTO d
             </p>
           </div>
         </div>
-      ) : (
-        <div className="grid grid-cols-2 gap-4 max-h-96 overflow-y-auto pr-2">
-          {buenasPracticas.map((practica, idx) => (
-            <div 
-              key={idx} 
-              className="bg-slate-800/50 p-4 rounded-lg border border-slate-700 hover:border-unrn-red/50 transition-all hover:-translate-y-1"
-            >
-              <div className="text-3xl mb-2">{practica.icon}</div>
-              <h4 className="text-base font-bold text-unrn-red mb-2">{practica.titulo}</h4>
-              <p className="text-xs text-slate-300 leading-relaxed">{practica.desc}</p>
-            </div>
-          ))}
-        </div>
-      )}
+      ) : null}
     </div>
   );
 };
@@ -1478,9 +1419,7 @@ export const PracticesSlide: React.FC<SlideProps> = ({ subStep = 0 }) => {
           if (idx !== subStep) return null;
           return (
             <div key={idx} className="absolute inset-0 flex flex-col justify-center animate-fade-in">
-              <div className="w-20 h-20 bg-gradient-to-br from-unrn-red to-orange-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-unrn-red/20">
-                {React.cloneElement(p.icon as React.ReactElement<any>, { size: 40, color: 'white' })}
-              </div>
+            
               <h3 className="text-4xl font-bold mb-6">{p.title}</h3>
               <p className="text-2xl text-slate-300 leading-relaxed mb-8">
                 {p.desc}
@@ -1751,7 +1690,7 @@ export const ConclusionSlide: React.FC<SlideProps> = () => {
         <div className="flex gap-4 mb-8 justify-center">
           <button
             onClick={() => setActiveTab('final')}
-            className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 ${
+            className={`px-4 py-2 rounded-xl font-bold transition-all duration-300 ${
               activeTab === 'final'
                 ? 'bg-unrn-red text-white shadow-lg shadow-red-500/50'
                 : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
@@ -1761,7 +1700,7 @@ export const ConclusionSlide: React.FC<SlideProps> = () => {
           </button>
           <button
             onClick={() => setActiveTab('mas-alla')}
-            className={`px-6 py-3 rounded-xl font-bold transition-all duration-300 ${
+            className={`px-4 py-2 rounded-xl font-bold transition-all duration-300 ${
               activeTab === 'mas-alla'
                 ? 'bg-unrn-red text-white shadow-lg shadow-red-500/50'
                 : 'bg-slate-800 text-slate-400 hover:bg-slate-700'
@@ -1809,11 +1748,7 @@ export const ConclusionSlide: React.FC<SlideProps> = () => {
                 </div>
               </div>
 
-              <div className="mt-8 p-6 bg-gradient-to-r from-unrn-red/20 to-purple-500/20 rounded-xl border border-unrn-red/30">
-                <p className="text-xl text-center text-slate-200 italic font-semibold">
-                  "El futuro del desarrollo no se define por cuánta IA utilizamos, sino por <span className="text-unrn-red">cómo la integramos responsablemente</span> en nuestras prácticas."
-                </p>
-              </div>
+             
             </div>
           )}
 
@@ -1853,11 +1788,7 @@ export const ConclusionSlide: React.FC<SlideProps> = () => {
                 </div>
               </div>
 
-              <div className="mt-8 p-6 bg-gradient-to-r from-green-500/20 to-cyan-500/20 rounded-xl border border-green-500/30">
-                <p className="text-xl text-center text-slate-200 italic font-semibold">
-                  "Mirar más allá del código implica reconocer que detrás de cada línea hay <span className="text-unrn-red">decisiones que afectan no solo al software, sino al mundo real</span>."
-                </p>
-              </div>
+        
             </div>
           )}
         </div>
@@ -1872,3 +1803,12 @@ export const ConclusionSlide: React.FC<SlideProps> = () => {
     </div>
   );
 };
+
+// --- Slide 11: End ---
+export const EndSlide: React.FC<SlideProps> = () => (
+  <div className="w-full h-full flex items-center justify-center animate-fade-in">
+    <h1 className="text-7xl md:text-8xl lg:text-9xl font-black text-white">
+      FIN.
+    </h1>
+  </div>
+);

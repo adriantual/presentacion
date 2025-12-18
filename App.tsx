@@ -10,7 +10,8 @@ import {
   PracticesSlide, 
   BestPracticesSlide, 
   ProblemsSlide, 
-  ConclusionSlide 
+  ConclusionSlide,
+  EndSlide
 } from './components/Slides';
 import { SlideType } from './types';
 
@@ -33,7 +34,8 @@ const App: React.FC = () => {
     <PracticesSlide isActive={currentSlide === 6} subStep={practiceStep} />,
     <BestPracticesSlide isActive={currentSlide === 7} />,
     <ProblemsSlide isActive={currentSlide === 8} />,
-    <ConclusionSlide isActive={currentSlide === 9} />
+    <ConclusionSlide isActive={currentSlide === 9} />,
+    <EndSlide isActive={currentSlide === 10} />
   ];
 
   const totalSlides = slides.length;
