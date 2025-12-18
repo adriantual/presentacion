@@ -133,16 +133,16 @@ export const IntroSlide: React.FC<SlideProps> = () => (
           {/* Tweet Content */}
           <div className="text-slate-200 text-base leading-relaxed space-y-2 mb-3">
             <p>
-              Hay un nuevo tipo de programación que llamo <strong className="text-blue-400">"vibe coding"</strong>, donde te entregás completamente a la vibra, abrazás lo exponencial y te olvidás de que el código siquiera existe. Esto es posible porque los LLMs (por ejemplo, Cursor Composer con Sonnet) ya son demasiado buenos.
+              <span className="underline decoration-2 decoration-blue-400">Hay un nuevo tipo de programación que llamo <strong className="text-blue-400">"vibe coding"</strong>, donde te entregás completamente a la vibra, abrazás lo exponencial y te olvidás de que el código siquiera existe.</span> Esto es posible porque los LLMs (por ejemplo, Cursor Composer con Sonnet) ya son demasiado buenos.
             </p>
             <p>
-              Además, hablo con Composer usando SuperWhisper, así que casi ni toco el teclado. Pido las cosas más tontas, como "reducí el padding de la barra lateral a la mitad", porque me da pereza buscarlo. Siempre le doy a <strong className="text-green-400">"Accept All"</strong>, ya ni leo los diffs.
+              Además, hablo con Composer usando SuperWhisper, así que casi ni toco el teclado. <span className="underline decoration-2 decoration-green-400">Pido las cosas más tontas, como "reducí el padding de la barra lateral a la mitad", porque me da pereza buscarlo. Siempre le doy a <strong className="text-green-400">"Accept All"</strong>, ya ni leo los diffs.</span>
             </p>
             <p>
-              Cuando me aparecen mensajes de error simplemente los copio y pego sin ningún comentario, y la mayoría de las veces eso lo arregla. El código crece más allá de mi comprensión habitual, tendría que sentarme a leerlo bastante para entenderlo.
+              <span className="underline decoration-2 decoration-yellow-400">Cuando me aparecen mensajes de error simplemente los copio y pego sin ningún comentario, y la mayoría de las veces eso lo arregla. El código crece más allá de mi comprensión habitual, tendría que sentarme a leerlo bastante para entenderlo.</span>
             </p>
             <p>
-              A veces los LLMs no logran corregir un bug, entonces lo esquivo o pido cambios aleatorios hasta que desaparece. No está tan mal para proyectos descartables de fin de semana, pero sigue siendo bastante divertido.
+              A veces los LLMs no logran corregir un bug, entonces lo esquivo o pido cambios aleatorios hasta que desaparece. <span className="underline decoration-2 decoration-purple-400">No está tan mal para proyectos descartables de fin de semana, pero sigue siendo bastante divertido.</span>
             </p>
             <p className="italic text-slate-400">
               "Estoy armando un proyecto o una webapp, pero en realidad no es programar: solo miro cosas, digo cosas, corro cosas y copio/pego cosas, y la mayoría de las veces funciona."
